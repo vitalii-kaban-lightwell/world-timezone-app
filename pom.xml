@@ -121,6 +121,12 @@
                 <enabled>false</enabled>
             </snapshots>
         </pluginRepository>
+        <pluginRepository>
+    		<id>mulesoft-public</id>
+    		<name>MuleSoft Public Repository</name>
+    		<url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+    		<layout>default</layout>
+		</pluginRepository>
     </pluginRepositories>
 
 </project>
