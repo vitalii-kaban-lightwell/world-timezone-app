@@ -16,4 +16,5 @@ pipline {
 		sh 'newman run /home/user/Postman/files/world-timezone-service.postman_collection.json -r htmlextra --reporter-htmlextra-export /home/user/Postman/files --reporter-htmlextra-darkTheme'
 		}
 	}
+	}
 }
