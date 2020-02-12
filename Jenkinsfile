@@ -6,6 +6,11 @@ pipeline {
 		sh 'mvn clean install'
 		}
 	}
+		stage('Unit Testing'){
+		steps{
+		sh 'mvn test'
+		}
+	}
 		stage('Deploy Application to Mulesoft CloudHub'){
 		steps{
 		sh 'mvn package deploy -DmuleDeploy'

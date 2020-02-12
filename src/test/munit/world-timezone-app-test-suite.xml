@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="world-timezone-app-test-suite.xml" />
+	<munit:test name="world-timezone-app-test-suite-world-demo-apiFlowTest" doc:id="d4fa8a12-4478-44c0-9fc0-8376f470d44e" description="Test">
+		<munit:execution >
+			<munit:set-event doc:name="Set Event" doc:id="4f1068d1-7eb7-451a-826d-1096cb9046d0" >
+				<munit:attributes value="#[{uriParams:{region:'Europe',city:'Kiev'}}]" />
+			</munit:set-event>
+			<flow-ref doc:name="Flow-ref to world-demo-apiFlow" doc:id="379bd546-41db-47d5-a720-1c59b1c5f8c9" name="world-demo-apiFlow"/>
+		</munit:execution>
+		<munit:validation >
+			<munit-tools:assert-that doc:name="Assert that" doc:id="b4efe140-f276-4b16-8cca-3c6317bf16f0" message="payload is null" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+		</munit:validation>
+	</munit:test>
+	<munit:test name="Copy_of_world-timezone-app-test-suite-world-demo-apiFlowTest" doc:id="a9b3a5ed-78fd-47ad-86f5-44d4961dd5ff" description="Test">
+			<munit:execution>
+				<munit:set-event doc:name="Copy_of_Set Event" doc:id="263c733e-7a0c-4152-ad83-736ece627930">
+					<munit:attributes value="#[{uriParams:{region:'Europe',city:'Kiev'}}]" />
+				</munit:set-event>
+				<flow-ref doc:name="Copy_of_Flow-ref to world-demo-apiFlow" doc:id="dae9add5-5584-43fb-9b58-fd976c218c36" name="world-demo-apiFlow" />
+			</munit:execution>
+			<munit:validation>
+				<munit-tools:assert-that doc:name="Copy_of_Assert that" doc:id="19f63aa2-debb-483d-8bf8-73ea1392a154" expression="#[payload]" is="#[MunitTools::withMediaType('application/json')]" />
+			</munit:validation>
+		</munit:test>
+
+</mule>
