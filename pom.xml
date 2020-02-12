@@ -9,7 +9,7 @@
     <packaging>mule-application</packaging>
 
 	<name>world-timezone-app</name>
-
+	
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -26,10 +26,20 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+					<cloudHubDeployment>
+						<username>vitalii_kaban</username>
+						<environment>Sandbox</environment>
+						<workers>1</workers>
+						<workerType>Micro</workerType>
+						<applicationName>world-timezone-service</applicationName>
+						<password>V.ktcjan4gfhjkm</password>
+						<muleVersion>4.2.2</muleVersion>
+					</cloudHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
 
 	<dependencies>
         <dependency>
@@ -73,3 +83,15 @@
     </pluginRepositories>
 
 </project>
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
