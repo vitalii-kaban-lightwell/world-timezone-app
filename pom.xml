@@ -14,7 +14,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 
-		<app.runtime>4.1.1</app.runtime>
+		<app.runtime>4.2.2</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	<munit.version>2.2.3</munit.version>
     </properties>
@@ -34,7 +34,7 @@
 						<workerType>Micro</workerType>
 						<applicationName>world-timezone-service</applicationName>
 						<password>V.ktcjan4gfhjkm</password>
-						<muleVersion>4.1.1</muleVersion>
+						<muleVersion>4.2.2</muleVersion>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
@@ -93,6 +93,12 @@
     </dependencies>
 
 	<repositories>
+		<repository>
+    		<id>mulesoft-public</id>
+    		<name>MuleSoft Public Repository</name>
+    		<url>https://repository.mulesoft.org/nexus/content/repositories/public/</url>
+    		<layout>default</layout>
+		</repository>
           <repository>
             <id>anypoint-exchange-v2</id>
             <name>Anypoint Exchange</name>
