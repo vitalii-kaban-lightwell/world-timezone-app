@@ -13,7 +13,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.2.2</app.runtime>
+		<app.runtime>4.1.1</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	<munit.version>2.2.3</munit.version>
     </properties>
@@ -33,7 +33,7 @@
 						<workerType>Micro</workerType>
 						<applicationName>world-timezone-service</applicationName>
 						<password>V.ktcjan4gfhjkm</password>
-						<muleVersion>4.2.2</muleVersion>
+						<muleVersion>4.1.1</muleVersion>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
