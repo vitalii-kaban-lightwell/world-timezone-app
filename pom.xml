@@ -18,7 +18,6 @@
 	<munit.version>2.2.3</munit.version>
     </properties>
 
-
 	<build>
 		<plugins>
 			<plugin>
