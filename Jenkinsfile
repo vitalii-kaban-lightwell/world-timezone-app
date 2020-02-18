@@ -16,10 +16,17 @@ pipeline {
 		sh 'mvn package deploy -DmuleDeploy'
 		}
 	}
-		stage('Performe Regression Testing'){
+		stage('Perform Regression Testing'){
 		steps{
 		sh 'newman run /home/user/Postman/files/world-timezone-service.postman_collection.json'
 		}
 	}
+	
+			stage('Deploy Application to Nexus Repo'){
+		steps{
+		sh 'mvn clean deploy'
+		}
+	}
+	
 	}
 }
